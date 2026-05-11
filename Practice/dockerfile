@@ -1,11 +1,17 @@
-FROM almalinux
+# FROM almalinux
 
-RUN yum install nginx -y
+# RUN yum install nginx -y
 
-RUN rm -f /usr/share/nginx/html/index.html
-#RUN echo "Hello, welcome to Dockerfile. A way of creating own image" > /usr/share/nginx/html/hello.html
+# RUN rm -f /usr/share/nginx/html/index.html
+# #RUN echo "Hello, welcome to Dockerfile. A way of creating own image" > /usr/share/nginx/html/hello.html
 
-COPY qi/ /usr/share/nginx/html/
+# COPY qi/ /usr/share/nginx/html/
 
 
-CMD [ "nginx", "-g", "daemon off;"]
+# CMD [ "nginx", "-g", "daemon off;"]
+
+FROM nginx
+
+ADD hello.txt /tmp/
+ADD ADD https://raw.githubusercontent.com/sivadevopsdaws74s/dockerfiles/master/commands.MD /tmp/
+ADD sample-1.tar /tmp/
