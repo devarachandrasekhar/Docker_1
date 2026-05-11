@@ -10,8 +10,12 @@
 
 # CMD [ "nginx", "-g", "daemon off;"]
 
-FROM nginx
+# FROM nginx
 
-ADD hello.txt /tmp/
-ADD https://raw.githubusercontent.com/sivadevopsdaws74s/dockerfiles/master/commands.MD /tmp/
-ADD sample-1.tar /tmp/
+# ADD hello.txt /tmp/
+# ADD https://raw.githubusercontent.com/sivadevopsdaws74s/dockerfiles/master/commands.MD /tmp/
+# ADD sample-1.tar /tmp/
+
+
+FROM almalinux:8
+CMD [ "yahoo.com" ]
