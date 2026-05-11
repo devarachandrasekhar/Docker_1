@@ -18,4 +18,4 @@
 
 
 FROM almalinux:8
-ENTRYPOINT [ "yahoo.com" ]
+ENTRYPOINT [ "ping","-c5","yahoo.com" ]
