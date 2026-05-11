@@ -2,6 +2,10 @@ FROM almalinux
 
 RUN yum install nginx -y
 
-RUN echo "Hello, welcome to Dockerfile. A way of creating own image" > /usr/share/nginx/html/hello.html
+RUN rm -f /usr/share/nginx/html/index.html
+#RUN echo "Hello, welcome to Dockerfile. A way of creating own image" > /usr/share/nginx/html/hello.html
 
-#CMD [ "nginx", "-g", "daemon off;"]
+COPY qi/ /usr/share/nginx/html/
+
+
+CMD [ "nginx", "-g", "daemon off;"]
