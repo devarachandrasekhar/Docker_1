@@ -1,0 +1,4 @@
+FROM nginx
+RUN rm -rf /usr/share/nginx/index.html
+
+COPY qi/ /usr/share/nginx/html/
