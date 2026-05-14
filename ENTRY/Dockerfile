@@ -1,3 +1,7 @@
+# FROM almalinux
+
+# CMD [ "ping", "-c5", "yahoo.com" ]
+
 FROM almalinux
 
-CMD [ "ping", "-c5", "yahoo.com" ]
+ENTRYPOINT [ "ping", "-c5", "yahoo.com" ]
